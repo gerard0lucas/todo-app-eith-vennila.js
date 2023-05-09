@@ -1,0 +1,138 @@
+:root {
+  --dark: #374151;
+  --darker: #1f2937;
+  --darkest: #111827;
+  --grey: #6b7280;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --light: #eee;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--dark);
+  color: #ffffff;
+}
+header {
+  padding: 35px 15px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+#new-task {
+  display: flex;
+  background-color: var(--darker);
+  height: 55px;
+  border-radius: 10px;
+}
+#input-new {
+  flex: 1 1 0%;
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 20px;
+}
+#submit-new {
+  background: rgb(244, 99, 99);
+  width: 120px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+#submit-new:hover {
+  background: rgb(255, 255, 255);
+  width: 120px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  color: #dc0e0e;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+main {
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+.task-list {
+  padding: 1rem;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+.tasks {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.content {
+  flex: 1 1 0%;
+}
+.text {
+  color: var(--light);
+  text-transform: capitalize;
+  font-size: 14px;
+  transition: 0.4s;
+  width: 100%;
+  display: block;
+}
+.text:not(:read-only) {
+  color: var(--pink);
+}
+.action {
+  display: flex;
+  gap: 22px;
+}
+.edit {
+  color: #05a676;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.edit:hover {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.delete {
+  color: #f80000;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.delete:hover {
+  color: #ffffff;
+  transition: 0.3s;
+}
